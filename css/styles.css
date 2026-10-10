@@ -10,7 +10,7 @@
     --bg-light: #F9FAFB;
     
     /* Typography */
-    --font-main: 'Inter', sans-serif;
+    --font-main: system-ui, -apple-system, sans-serif;
     
     /* Spacing & Layout */
     --container-max-width: 1200px;
@@ -275,6 +275,225 @@ a {
 @media (max-width: 768px) {
     .nav-links, .auth-buttons {
         display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .btn-search {
+        margin-top: 8px;
+        width: 100%;
+    }
+}
+/* =========================================
+   Navbar Extended Styles (Person 1)
+   ========================================= */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    font-size: 1.2rem;
+}
+
+.logo-text {
+    color: var(--text-primary);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+}
+
+/* =========================================
+   Hero Section Styles (Person 1)
+   ========================================= */
+.hero-section {
+    text-align: center;
+    padding: 80px 0 60px 0;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: #EEF2FF;
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero-title .highlight {
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-toggle {
+    display: inline-flex;
+    background-color: var(--bg-light);
+    padding: 6px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+.toggle-btn {
+    background: none;
+    border: none;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.2);
+}
+
+.search-container {
+    display: flex;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    background: white;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.search-input-wrapper {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0 16px;
+}
+
+.search-icon {
+    color: var(--text-secondary);
+    margin-right: 12px;
+}
+
+#hero-search {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.btn-search {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 32px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.popular-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.tags-label {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.tag {
+    background-color: var(--bg-light);
+    color: var(--text-secondary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid #E5E7EB;
+    transition: all 0.2s;
+}
+
+.tag:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links, .auth-buttons {
+        display: none;
+    }
+    
+    .nav-links.mobile-active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
     }
     
     .mobile-menu-btn {

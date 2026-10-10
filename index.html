@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreelanceHub</title>
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -15,25 +11,75 @@
     <!-- Navbar (Person 1) -->
     <header class="navbar">
         <div class="container">
-            <div class="logo">FreelanceHub</div>
-            <nav class="nav-links">
+            <div class="nav-left">
+                <div class="logo">
+                    <span class="logo-icon">FH</span>
+                    <span class="logo-text">FreelanceHub</span>
+                </div>
+            </div>
+            
+            <nav class="nav-links" id="nav-links">
                 <a href="#">Find Talent</a>
                 <a href="#">Find Work</a>
                 <a href="#">Why Us</a>
                 <a href="#">Enterprise</a>
             </nav>
+            
             <div class="auth-buttons">
                 <a href="#" class="btn-login">Log In</a>
                 <a href="#" class="btn-signup">Sign Up Free</a>
             </div>
+            
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <!-- Main Content Area -->
     <main>
         <!-- Hero Section (Person 1) -->
-        <section id="hero" class="container">
-            <!-- Hero content goes here -->
+        <section id="hero" class="hero-section">
+            <div class="container">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span> INDIA'S FASTEST GROWING FREELANCE PLATFORM
+                </div>
+                
+                <h1 class="hero-title">
+                    Hire World-Class Talent.<br>
+                    <span class="highlight">Build What Matters.</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Connect with elite freelancers across development, design,<br>
+                    writing, and more. Post a job in minutes — proposals arrive in hours.
+                </p>
+
+                <div class="hero-toggle" id="hero-toggle">
+                    <button class="toggle-btn active" data-type="hiring">I'm Hiring</button>
+                    <button class="toggle-btn" data-type="freelancing">I'm Freelancing</button>
+                </div>
+
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="hero-search" placeholder="Search skills — React, Figma, Python...">
+                    </div>
+                    <button class="btn-search">Find Talent</button>
+                </div>
+
+                <div class="popular-tags">
+                    <span class="tags-label">Popular:</span>
+                    <a href="#" class="tag">React Developer</a>
+                    <a href="#" class="tag">UI Designer</a>
+                    <a href="#" class="tag">Python Expert</a>
+                    <a href="#" class="tag">Content Writer</a>
+                    <a href="#" class="tag">Mobile App Dev</a>
+                    <a href="#" class="tag">Logo Designer</a>
+                </div>
+            </div>
         </section>
 
         <!-- Categories Section (Person 2) -->
